@@ -15,12 +15,12 @@ Vagrant.configure(2) do |config|
      echo '' > $LOG
 
      # Pyton version
-     PYVER=$(cat /vagrant/PYTHON)
+     PYVER=$(cat /vagrant/config/PYTHON)
      PYTHON="python${PYVER}"
      PIP="pip${PYVER} -q"
 
      # Librarian version
-     VERSION=$(cat /vagrant/VERSION)
+     VERSION=$(cat /vagrant/config/VERSION)
      PKG="https://github.com/Outernet-Project/librarian/archive/${VERSION}.zip"
 
      # patch_copy(name)
@@ -77,7 +77,7 @@ Vagrant.configure(2) do |config|
 
      # Enable default system service
      echo ">>> ENABLING SYSTEM SERVICE ... "
-     if [ $(cat /vagrant/USEAUTH) == "yes" ]; then
+     if [ $(cat /vagrant/config/USEAUTH) == "yes" ]; then
          systemctl enable librarian.service
      else
          systemctl enable librarian-na.service
@@ -86,7 +86,7 @@ Vagrant.configure(2) do |config|
 
      # Create superuser
      echo ">>> CREATING SUPERUSER ... "
-     cat /vagrant/PASSWORD | $PYTHON -m librarian.app --su 
+     cat /vagrant/config/PASSWORD | $PYTHON -m librarian.app --su 
      echo DONE
 
      echo ">>> SETTING UP DIRECTORIES ... "

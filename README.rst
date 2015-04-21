@@ -63,8 +63,9 @@ A good place to obtain the pre-packaged content would be
 About various files
 ===================
 
-This package contains a few files that may be of interest. Note that you must
-rebuild the virtual machine after modifying any of these files.
+This package contains a few files that may be of interest. These files are
+located in the 'config' folder inside this package. Note that you must rebuild
+the virtual machine after modifying any of these files.
 
 When editing these files on Windows, please use a programmer's editor that
 understands Unix-style newline characters. Notepad is not one of them. We
