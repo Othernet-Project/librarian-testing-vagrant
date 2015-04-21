@@ -27,6 +27,17 @@ The first time you want to start the virtual machine, run the ``start.cmd``
 the virtual machine but eventually it will be started and you will be able to
 access Librarian at `localhost:8080`_.
 
+Don't worry if you see a message like this::
+
+    The SSH connection was unexpectedly closed by the remote end. This
+    usually indicates that SSH within the guest machine was unable to
+    properly start up. Please boot the VM in GUI mode to check whether
+    it is booting properly.
+
+This is because the first time you start, it needs to reboot the virtual
+machine to accommodate any system updates (inside the virtual machine, not your
+Operating System) that need a reboot.
+
 The script will prompt for you to press any key to stop the virtual machine.
 When you are done testing, you can press any key to stop it.
 
