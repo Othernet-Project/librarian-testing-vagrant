@@ -44,8 +44,8 @@ Default username and password
 =============================
 
 To access the dashboard, default username and password are 'test' and 'test'
-(without quotes). See the next section for more information if you want to
-change them.
+(without quotes). See `About various files`_ for more information if you want
+to change them.
 
 Supplying content
 =================
