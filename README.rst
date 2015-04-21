@@ -16,7 +16,8 @@ Obtaining the files
 ===================
 
 The files can be obtained from the `GitHub repository`_ by clicking the
-download button on the right. You can also use `this link`_.
+download button on the right. You can also use `this link`_. After obtaining
+the package, simply unzip it somewhere.
 
 Starting the virtual machine for the first time
 ===============================================
