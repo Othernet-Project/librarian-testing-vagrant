@@ -99,6 +99,7 @@ Vagrant.configure(2) do |config|
          /var/spool/downloads/{content,files} /var/lib/outernet
      echo DONE
 
-     echo ">>> FINSHED: PLEASE RESTART"
+     echo ">>> REBOOTING, PLEASE WAIT A FEW MOMENTS"
+     reboot
   SHELL
 end
