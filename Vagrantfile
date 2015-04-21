@@ -33,12 +33,12 @@ Vagrant.configure(2) do |config|
          > "/etc/systemd/system/${1}.service"
      }
 
-     PACMAN="pacman --noprogress --noconfirm" >> $LOG
-     $PACMAN -Sy >> $LOG
+     PACMAN="pacman --noprogress --noconfirm"
+     $PACMAN -Sy >> $LOG 2>&1
 
      # Install reflector to sort mirrors
      echo ">>> GENERATING NEW MIRROR LIST ... "
-     $PACMAN -S --needed reflector >> $LOG
+     $PACMAN -S --needed reflector >> $LOG 2>&1
      reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist \
          >> $LOG 2>&1 
      echo DONE
@@ -51,7 +51,7 @@ Vagrant.configure(2) do |config|
      else
        PKGS="python python-pip"
      fi
-     $PACMAN -S --needed $PKGS libev gettext >> $LOG
+     $PACMAN -S --needed $PKGS libev gettext >> $LOG 2>&1
      echo DONE
 
      # Install Librarian and its dependencies
@@ -78,25 +78,24 @@ Vagrant.configure(2) do |config|
      # Enable default system service
      echo ">>> ENABLING SYSTEM SERVICE ... "
      if [ $(cat /vagrant/config/USEAUTH) == "yes" ]; then
-         systemctl enable librarian.service
+         systemctl enable librarian.service >> $LOG 2>&1
      else
-         systemctl enable librarian-na.service
+         systemctl enable librarian-na.service >> $LOG 2>&1
      fi
      echo DONE
 
      # Create superuser
      echo ">>> CREATING SUPERUSER ... "
-     cat /vagrant/config/PASSWORD | $PYTHON -m librarian.app --su 
+     cat /vagrant/config/PASSWORD | $PYTHON -m librarian.app --su >> $LOG 2>&1
      echo DONE
 
      echo ">>> SETTING UP DIRECTORIES ... "
-     mkdir -p /vagrant/uploads
-     ln -s /vagrant/content /var/spool/downloads
+     mkdir -p /vagrant/uploads/{content,files}
+     ln -s /vagrant/uploads /var/spool/downloads
      mkdir -p /srv/zipballs
-     mkdir -p /var/spool/downloads/{content,files}
      mkdir -p /var/lib/outernet
      chown vagrant.vagrant /srv/zipballs /var/spool/downloads \
-         /var/spool/downloads/{content,files} /var/lib/outernet
+         /var/lib/outernet
      echo DONE
 
      echo ">>> REBOOTING, PLEASE WAIT A FEW MOMENTS"
