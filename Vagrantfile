@@ -44,7 +44,7 @@ Vagrant.configure(2) do |config|
      echo DONE
 
      # Update system packages
-     echo ">>> UPDATING SYSTEM PACKAGES ... "
+     echo ">>> UPDATING SYSTEM PACKAGES (sit tight, may take a while) ... "
      $PACMAN -Su >> $LOG
      if [ "$PYVER" == 2 ]; then
        PKGS="python2 python2-pip"
