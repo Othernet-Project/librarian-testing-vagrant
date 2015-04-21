@@ -16,7 +16,7 @@ Obtaining the files
 ===================
 
 The files can be obtained from the `GitHub repository`_ by clicking the
-download button on the right.
+download button on the right. You can also use `this link`_.
 
 Starting the virtual machine for the first time
 ===============================================
@@ -102,6 +102,7 @@ issue tracker`_ instead. Same applies to any feature requests you may have.
 .. _Vagrant: https://www.vagrantup.com/
 .. _VirtualBox: https://www.virtualbox.org/
 .. _GitHub repository: https://github.com/Outernet-Project/librarian-testing-vagrant
+.. _this link: https://github.com/Outernet-Project/librarian-testing-vagrant/archive/master.zip
 .. _`localhost:8080`: http://localhost:8080/
 .. _SublimeText: http://www.sublimetext.com/
 .. _this package's issue tracker: https://github.com/Outernet-Project/librarian-testing-vagrant/issues
