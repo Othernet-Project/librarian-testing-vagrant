@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
   config.vm.provider "virtualbox" do |vb|
      vb.memory = "256"
-     vb.name = "librarian"
+     vb.name = "librarian_testing"
   end
   config.vm.provision "shell", inline: <<-SHELL
      set -e
