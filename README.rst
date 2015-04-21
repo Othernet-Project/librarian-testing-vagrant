@@ -89,8 +89,8 @@ Troubleshooting
 ===============
 
 If you need to troubleshoot issues during initial setup, you will find
-installation log file in the directory where you unpacked this package. The file
-is named ``install_log.txt``.
+installation log file in the directory where you unpacked this package. The
+file is named ``install_log.txt``.
 
 Reporting bugs
 ==============
