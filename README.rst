@@ -6,8 +6,8 @@ This package contains a Vagrant box definition, provisioning scripts... err, so
 basically it contains stuff you need to test Librarian on your
 Windows/Linux/Mac machine.
 
-Prereqisites
-============
+Prerequisites
+=============
 
 You will need to install Vagrant_ and VirtualBox_ before you can use these
 files. 
@@ -50,7 +50,7 @@ to change them.
 Supplying content
 =================
 
-During inital startup, the configuration script will create a folder 'uploads'
+During initial startup, the configuration script will create a folder 'uploads'
 inside the folder where you unpacked this package. This folder will contain two
 subfolders: 'content', and 'files'. You can put content zipballs in the
 'content' folder, and they will appear in the "Updates" section (represented by
@@ -70,7 +70,7 @@ When editing these files on Windows, please use a programmer's editor that
 understands Unix-style newline characters. Notepad is not one of them. We
 recommend using SublimeText_.
 
-The first file you want to tkae a look is USEAUTH. This file tells the virtual
+The first file you want to take a look is USEAUTH. This file tells the virtual
 box configuration scripts whether to start Librarian with authentication
 enabled or not. With Librarian authentication enabled, dashboard is locked out
 with password.
@@ -89,7 +89,7 @@ Troubleshooting
 ===============
 
 If you need to troubleshoot issues during initial setup, you will find
-installation log file in the diretory where you unpacked this package. The file
+installation log file in the directory where you unpacked this package. The file
 is named ``install_log.txt``.
 
 Reporting bugs
