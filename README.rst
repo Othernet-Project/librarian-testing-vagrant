@@ -23,9 +23,9 @@ Starting the virtual machine for the first time
 ===============================================
 
 The first time you want to start the virtual machine, run the ``start.cmd``
-(Windows) or ``start.sh`` (Mac/Linux) file. It will take a while to configure
-the virtual machine but eventually it will be started and you will be able to
-access Librarian at `localhost:8080`_.
+(Windows), ``start.command`` (Mac) or ``start.sh`` (Linux) file. It will take a
+while to configure the virtual machine but eventually it will be started and
+you will be able to access Librarian at `localhost:8080`_.
 
 Don't worry if you see a message like this::
 
@@ -48,8 +48,8 @@ When you start the virtual machine for the first time, it will set up a copy of
 Librarian for you to test. This is normally the latest development snapshot. As
 such, it can become outdated quickly. After a while, you will want to rebuild
 your virtual machine to obtain the latest code. To do this, run the
-``rebuild.cmd`` (Windows) or ``rebuild.sh`` (Mac/Linux) file. It will rebuild
-and start the virtual machine.
+``rebuild.cmd`` (Windows), ``rebuild.command`` (Mac) or ``rebuild.sh`` (Linux)
+file. It will rebuild and start the virtual machine.
 
 Default username and password
 =============================
